@@ -1,52 +1,52 @@
-"use client"
-import { fadeInUp as fadeIn, fadeInLeft, fadeInLeft as fadeLeft, fadeInRight as fadeRight } from "@/libs/animations"
-import { motion } from "framer-motion"
-import Image from "next/image"
+"use client";
+import { fadeInUp as fadeIn, fadeInLeft, fadeInRight as fadeRight } from "@/libs/animations";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 
 const pillars = [
   {
     symbol: "◈",
-    title: "Fragrance",
-    body: "The art of attar — India's oldest perfumery tradition — distilled into ritual-grade olfactory experiences that speak to memory, season, and longing.",
+    title: "Spiritual Alignment",
+    body: "Elevate your consciousness and tap into your higher self through practices designed to guide you on a journey of self-discovery.",
   },
   {
     symbol: "♪",
-    title: "Sound",
-    body: "Classical ragas as a technology of consciousness. We curate intimate musical gatherings where sound becomes a vehicle for inner transformation.",
+    title: "Classical Music",
+    body: "Experience the neurological and spiritual impact of Indian Classical Music, scientifically proven to positively impact the mind and soul.",
   },
   {
     symbol: "◎",
-    title: "Stillness",
-    body: "Contemplative practices drawn from Vedic and yogic traditions, offered in unhurried formats that honour the body's innate intelligence.",
+    title: "Vedic Mantras",
+    body: "Harness the power of sacred sounds to raise the vibrations of your environment and energy field through ancient mantra chants.",
   },
   {
     symbol: "✦",
-    title: "Heritage",
-    body: "Every Avyukta experience is rooted in India's vast civilisational wisdom — not as nostalgia, but as a living, breathing inheritance.",
+    title: "Traditional Art",
+    body: "Celebrating India's rich heritage by supporting rural artisans and women-led communities who handcraft each product with love.",
   },
 ]
 
 const timeline = [
   {
-    year: "2018",
-    title: "The Seed",
-    body: "Founded in a quiet corner of Defence Colony, New Delhi, Avyukta began as a private fragrance atelier for a select circle of discerning collectors.",
-  },
-  {
-    year: "2020",
-    title: "Sound & Silence",
-    body: "Expanded into music and mindfulness, hosting the first Baithak series — intimate classical concerts in a curated home setting.",
-  },
-  {
     year: "2022",
-    title: "A Sanctuary",
-    body: "Transformed our space into a dedicated sensory sanctuary — a place where guests could experience the full breadth of Indian contemplative luxury.",
+    title: "The Vision",
+    body: "Founded with a unique vision to offer spiritual, scientific, and authentic experiences rooted in traditional Vedic practices.",
+  },
+  {
+    year: "2023",
+    title: "Community Growth",
+    body: "Empowering rural women-led communities and artisans to promote Indian traditional products and create employment opportunities.",
   },
   {
     year: "2024",
-    title: "Present",
-    body: "Today, Avyukta hosts over 40 experiences annually, each one handcrafted for the discerning soul seeking depth over spectacle.",
+    title: "Quality Excellence",
+    body: "Became an ISO 9001:2015 certified and MSME (Udyam) registered enterprise, ensuring internationally recognised quality standards.",
+  },
+  {
+    year: "Present",
+    title: "Transformation",
+    body: "Today, Avyukta continues to help premium customers align spiritually and experience oneness with the divine through curated offerings.",
   },
 ]
 
@@ -101,13 +101,16 @@ export default function About() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <p className="text-xs tracking-[0.35em] uppercase text-gold mb-6 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Our Foundation
-              </p>
+              <div className="inline-block px-4 py-1 border border-gold/30 mb-6">
+                <p className="text-[10px] tracking-[0.3em] uppercase text-gold font-medium">ISO 9001:2015 Certified · MSME Registered</p>
+              </div>
               <h2 className="font-serif text-4xl md:text-5xl text-maroon font-light leading-snug mb-8">
-                Where India's Soul Meets the Art of Living
+                Where Tradition Meets Transformation
               </h2>
               <div className="h-px w-16 bg-gradient-to-r from-gold to-transparent mb-8" />
+              <p className="text-foreground/80 text-lg font-serif italic leading-relaxed mb-8">
+                "While our work is rooted in traditional knowledge, craftsmanship, and subtle processes, our systems follow internationally recognised quality standards."
+              </p>
             </motion.div>
 
             <motion.div
@@ -115,16 +118,32 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col gap-6 pt-4 lg:pt-16"
+              className="flex flex-col gap-6"
             >
               <p className="text-foreground/70 text-base leading-loose font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Avyukta was conceived not as a brand, but as a philosophy — a quiet rebellion against the noise of modern consumption. We believe that India's most profound gift to the world is not its commerce, but its civilisational depth: a 5,000-year-old conversation about how to live with intention, beauty, and presence.
+                Founded in 2022, Avyukta was born out of a deep passion for preserving and sharing the profound essence of Indian Vedic culture. At the heart of our vision is a commitment to offering an experience that is not only spiritual but also scientific, authentic, and deeply rooted in tradition.
               </p>
               <p className="text-foreground/70 text-base leading-loose font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Each offering at Avyukta is drawn from this wellspring — fragrance traditions rooted in ancient India's mastery of the olfactory arts, musical traditions that understand sound as medicine, and contemplative practices that have guided seekers for millennia.
+                Through our unique blend of products, services, and teachings, we seek to guide individuals on a journey of spiritual alignment, self-discovery, and holistic well-being. This ensures consistency, transparency, and care across every offering—allowing ancient practices to be delivered with modern reliability and trust.
               </p>
               <p className="text-foreground/70 text-base leading-loose font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-                We do not recreate the past. We distil its wisdom into experiences that speak to the contemporary seeker who has everything — and longs for meaning.
+                We are proud that all our products are hand made with love by the rural women of India, crafting high-quality items in small batches that honour traditional Vedic techniques passed down through generations.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Vision & Mission Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 pt-24 border-t border-gold/10">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h3 className="font-serif text-2xl text-maroon mb-6">Our Vision</h3>
+              <p className="text-foreground/70 text-sm leading-loose font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+                We envision a world where ancient Indian wisdom is respected, preserved, and passed on to future generations. At Avyukta, we are dedicated to making Indian Traditional Vedic Culture, Music, Art, and Artisan craftsmanship accessible to those who seek a deeper connection to themselves and the universe.
+              </p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+              <h3 className="font-serif text-2xl text-maroon mb-6">Our Mission</h3>
+              <p className="text-foreground/70 text-sm leading-loose font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Our mission is simple: to empower you through the transformative power of ancient practices. By offering carefully curated products and services, we help you connect to your authentic self, experience joy within, and cultivate oneness with the divine.
               </p>
             </motion.div>
           </div>
@@ -246,6 +265,147 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── What We Offer ── */}
+      <section className="bg-white py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="text-xs tracking-[0.35em] uppercase text-gold mb-4 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Experiences & Services
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl text-maroon font-light mb-6">What We Offer</h2>
+            <div className="gold-divider" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {[
+              { title: "Vedic Rituals & Chanting", desc: "Guided sessions and practices to align your energy and enhance spiritual growth." },
+              { title: "Classical Music Experiences", desc: "Immerse yourself in the neurological and spiritual benefits of ancient music traditions." },
+              { title: "Spiritual Retreats", desc: "Elevate your consciousness and develop inner peace through mindful practices." },
+              { title: "Traditional Art & Artisans", desc: "Handcrafted products that celebrate India's rich heritage, supporting rural artisans." }
+            ].map((offer, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                <h4 className="font-serif text-lg text-maroon mb-4">{offer.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light" style={{ fontFamily: "'Inter', sans-serif" }}>{offer.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Products (Launching Soon) ── */}
+      <section className="bg-ivory py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="text-xs tracking-[0.35em] uppercase text-gold mb-4 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Collection
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl text-maroon font-light mb-6">Launching Soon</h2>
+            <div className="gold-divider" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {/* Bhāvinī Incense */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="bg-white p-10 border border-gold/10 shadow-sm flex flex-col">
+              <span className="text-xs tracking-widest text-gold uppercase mb-4 block">Luxury Incense</span>
+              <h3 className="font-serif text-2xl text-maroon mb-4">भाविनी (Bhāvinī)</h3>
+              
+              <div className="mb-6 py-4 border-y border-gold/5">
+                <p className="text-[11px] text-maroon/60 italic mb-2 leading-relaxed">
+                  सत्त्वं वर्धयते गन्धः रजस्तमसि शम्यतः ।<br/>
+                  यदा सत्त्वे प्रतिष्ठाय चित्तं शान्तिमवाप्नुयात् ॥
+                </p>
+                <p className="text-[10px] text-gold/60 font-light italic">
+                  "Fragrance nourishes sattva, pacifying rajas and tamas. When the mind rests in sattva, peace naturally arises."
+                </p>
+              </div>
+
+              <p className="text-foreground/70 text-sm leading-relaxed font-light mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Made using traditional hand-rolling techniques and Parijat, Bhāvinī gently influences the nervous system, encouraging calm focus and emotional balance.
+              </p>
+              <div className="mt-auto">
+                <ul className="text-[11px] space-y-2 uppercase tracking-wider text-gold/80 mb-6">
+                  <li>• Zero-Carbon Footprint</li>
+                  <li>• Carcinogen Tested (Benzene/Furan Free)</li>
+                  <li>• Natural Botanicals & Resins</li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Saumyā Incense */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-white p-10 border border-gold/10 shadow-sm flex flex-col">
+              <span className="text-xs tracking-widest text-gold uppercase mb-4 block">Quiet Calm</span>
+              <h3 className="font-serif text-2xl text-maroon mb-4">सौम्या (Saumyā)</h3>
+
+              <div className="mb-6 py-4 border-y border-gold/5">
+                <p className="text-[11px] text-maroon/60 italic mb-2 leading-relaxed">
+                  यत्र गन्धेन विश्रामः श्वासो मन्दं प्रवर्तते ।<br/>
+                  तत्र चित्तं स्वयँ शान्तं अव्यक्ते लीयते पुनः ॥
+                </p>
+                <p className="text-[10px] text-gold/60 font-light italic">
+                  "Where fragrance grants rest, where breath slows naturally, there the mind becomes calm and returns to the unmanifest."
+                </p>
+              </div>
+
+              <p className="text-foreground/70 text-sm leading-relaxed font-light mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Handcrafted using pure Lavender Oil to release sensory fatigue and emotional overload. Designed for modern lives and conscious spaces.
+              </p>
+              <div className="mt-auto">
+                <ul className="text-[11px] space-y-2 uppercase tracking-wider text-gold/80">
+                  <li>• Brainwave Shift (Beta to Alpha)</li>
+                  <li>• Reduced Cortisol Response</li>
+                  <li>• Ideal for Sleep & Meditation</li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Rose Water */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="bg-white p-10 border border-gold/10 shadow-sm flex flex-col">
+              <span className="text-xs tracking-widest text-gold uppercase mb-4 block">Pure Hydrosol</span>
+              <h3 className="font-serif text-2xl text-maroon mb-4">Ark-e-Gulab</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6 italic">"Sheetala (Cooling) & Hridya (Heart-soothing)"</p>
+              <p className="text-foreground/70 text-sm leading-relaxed font-light mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Traditional vapor-distilled rose hydrosol. Balances Pitta dosha, calms heat/inflammation, and provides a natural cooling effect for both skin and mind.
+              </p>
+              <div className="mt-auto">
+                <ul className="text-[11px] space-y-2 uppercase tracking-wider text-gold/80">
+                  <li>• Ayurvedic Heritage</li>
+                  <li>• Restores Natural pH</li>
+                  <li>• Alcohol & Synthetic Free</li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Natural Kumkum */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="bg-white p-10 border border-gold/10 shadow-sm flex flex-col">
+              <span className="text-xs tracking-widest text-gold uppercase mb-4 block">Ajna Activation</span>
+              <h3 className="font-serif text-2xl text-maroon mb-4">Natural Kumkum</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed font-light mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Crafted from Haldi, Lemon, Fitkari, and Suhaga. Stimulates intuition and focus while reset the emotional tone of your sacred space.
+              </p>
+              <div className="mt-auto">
+                <p className="text-[10px] uppercase tracking-widest text-gold/60 font-medium">Ingredients: Haldi · Lemon · Fitkari · Suhaga</p>
+              </div>
+            </motion.div>
+
+            {/* A2 Ghee */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-white p-10 border border-gold/10 shadow-sm flex flex-col">
+              <span className="text-xs tracking-widest text-gold uppercase mb-4 block">Ayurvedic Ghrita</span>
+              <h3 className="font-serif text-2xl text-maroon mb-4">A2 Bilona Ghee</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed font-light mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Hand-churned (Bilona) from Desi A2 cow milk. A powerful Rasayana (rejuvenator) that enhances memory (medhā) and balances all three doshas.
+              </p>
+              <div className="mt-auto">
+                <ul className="text-[11px] space-y-2 uppercase tracking-wider text-gold/80">
+                  <li>• Brain Health & Butyrate Rich</li>
+                  <li>• High CLA (Healthy Fats)</li>
+                  <li>• Casein & Lactose Free</li>
+                </ul>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

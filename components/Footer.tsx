@@ -25,9 +25,12 @@ export default function Footer() {
               className="h-16 w-auto object-contain  mr-auto"
             />
             <p className="text-sm font-inter text-ivory/50 leading-relaxed max-w-xs">
-              A sanctuary of Indian luxury — experiential living through
-              fragrance, sound, and stillness.
+              Where tradition meets transformation. An ISO 9001:2015 certified and MSME registered enterprise dedicated to Indian Vedic culture.
             </p>
+            <div className="flex flex-col gap-1">
+              <span className="text-[10px] tracking-[0.2em] uppercase text-gold/40 font-medium">ISO 9001:2015 Certified</span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-gold/40 font-medium">Registered under MSME</span>
+            </div>
             {/* Decorative line */}
             <div className="h-px w-16 bg-gradient-to-r from-gold/60 to-transparent mt-2" />
           </div>

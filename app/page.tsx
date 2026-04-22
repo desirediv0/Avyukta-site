@@ -84,7 +84,7 @@ export default function HomePage() {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.5, duration: 1, ease: "easeOut" }} className="mb-6">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-12" style={{ background: "linear-gradient(to right, transparent, rgba(212,175,55,0.6))" }} />
-              <span className="text-xs tracking-[0.4em] uppercase font-inter" style={{ color: "rgba(212,175,55,0.4)" }}>Est. 2018</span>
+              <span className="text-xs tracking-[0.4em] uppercase font-inter" style={{ color: "rgba(212,175,55,0.4)" }}>Est. 2022</span>
               <div className="h-px w-12" style={{ background: "linear-gradient(to left, transparent, rgba(212,175,55,0.6))" }} />
             </div>
             <Image
@@ -310,8 +310,8 @@ export default function HomePage() {
                 <div className="h-px w-16 bg-gradient-to-r from-gold to-transparent mb-6" />
               </motion.div>
               <motion.p variants={fadeIn} custom={3} className="text-white/60 text-base leading-relaxed font-light mb-8" style={{ fontFamily: "'Inter', sans-serif" }}>
-                An intimate musical gathering exploring the sacred intersection of Hindustani classical music and devotional expression.
-                Join us for an evening of ragas dedicated to Shri Krishna — performed by masters in an atmosphere of contemplative beauty.
+                Nāda-Maṇḍala, an initiative of Avyukta, presents a curated spiritual journey through Raaga, Bhajan, and meditative Santoor. 
+                Experience a sacred flow designed to align energy and connect hearts through the depth of Indian Classical traditions.
               </motion.p>
               <motion.div variants={fadeIn} custom={4} className="flex flex-col gap-3 mb-10">
                 <div className="flex items-center gap-3 text-white/50 text-sm font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -320,9 +320,10 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-3 text-white/50 text-sm font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
                   <MapPin size={14} className="text-gold flex-shrink-0" />
-                  Iskcon Temple, Sector 13, Dwarka, New Delhi
+                  ISKCON Dwarka, Sector 13, New Delhi
                 </div>
               </motion.div>
+
               <motion.div variants={fadeIn} custom={5}>
                 <Link
                   href="/events"
@@ -367,6 +368,49 @@ export default function HomePage() {
             </Link>
           </motion.div>
         </motion.div>
+      </section>
+
+      {/* PRODUCT PREVIEW (LAUNCHING SOON) */}
+      <section className="py-28 px-6 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+            <div>
+              <p className="text-xs tracking-[0.35em] uppercase text-gold mb-4 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>Collection</p>
+              <h2 className="font-serif text-4xl md:text-5xl text-maroon font-light">The Luxury Rituals</h2>
+              <p className="text-gold mt-4 tracking-widest uppercase text-[10px] font-medium">Launching Soon</p>
+            </div>
+            <p className="max-w-md text-muted-foreground text-sm font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+              A curated range of traditional Vedic products, handcrafted by rural women and designed to align your space and spirit.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              { name: "Bhāvinī Incense", tag: "Hand-Rolled", desc: "Pure Parijat fragrance for deep emotional focus." },
+              { name: "Ark-e-Gulab", tag: "Vapor Distilled", desc: "Traditional rose water hydrosol for cooling and clarity." },
+              { name: "A2 Bilona Ghee", tag: "Bilona Method", desc: "Hand-churned medicinal grade ghee for holistic vitality." }
+            ].map((product, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group cursor-default"
+              >
+                <div className="aspect-[4/5] bg-ivory border border-gold/10 flex items-center justify-center mb-6 relative overflow-hidden group-hover:border-gold/30 transition-colors" style={{ background: "rgba(248,245,240,0.5)" }}>
+                  <span className="text-maroon/5 font-serif text-9xl absolute -bottom-4 -right-4 select-none">✦</span>
+                  <div className="z-10 text-center px-8">
+                    <p className="text-[10px] tracking-[0.2em] uppercase text-gold mb-2">{product.tag}</p>
+                    <h3 className="font-serif text-2xl text-maroon mb-4">{product.name}</h3>
+                    <div className="h-px w-8 bg-gold/40 mx-auto" />
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-sm font-light text-center px-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>{product.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* CTA STRIP */}

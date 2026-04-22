@@ -36,14 +36,14 @@ const events: Event[] = [
     title: "Krishna Nāda",
     subtitle: "An Evening of Rāga & Bhakti",
     date: "Sunday, 10th May 2026 · 06:00 PM Onwards",
-    location: "Iskcon Temple, Sector 13, Dwarka, New Delhi",
+    location: "ISKCON Dwarka, Sector 13, New Delhi",
     category: "Music Baithak",
     description:
       "A soulful journey of Raaga, Bhajan, Naam Sankirtan & Santoor Recital followed by Dinner Prasadam.",
     longDescription:
-      "Experience the depth of timeless Raagas and Bhakti with two soulful performances in a divine ISKCON setting. The evening features a Vocal Recital exploring devotion and stillness, followed by a meditative Santoor Recital. Performers include Dr. Ashique Kumar (Harmonium), Shri Balram Sisodiya (Tabla), Shri Anuj Dangwal (Vocals), Shri Shambhu Sisodiya (Sarangi) for the vocal session, and Shri Divyansh Harshit Srivastava (Santoor), Shri Ujith Udaya Kumar (Tabla), and Dr. Ankit Parikh (Pakhawaj) for the Santoor recital. Includes Live Snacks and Dinner Prasadam. Donor passes available on BookMyShow, Zomato District, and Urbanaut.",
+      "Nāda-Maṇḍala, an initiative of Avyukta, presents 'Krishna Nāda'—a sacred experience of stillness, bhaav, and devotion. This curated spiritual journey flows through four stages: Raaga Invocation for energy alignment, Bhajan Recital for devotion, Naam Sankirtan for collective energy, and a meditative Santoor Finale for closure. The evening features eminent artists including Shri Divyansh Harshit Srivastava (Santoor) and Shri Anuj Dangwal (Vocals). Set in the majestic ISKCON Dwarka, the event offers a high-trust, spiritual environment for culture enthusiasts. Includes Live Snacks and Dinner Prasadam. Donor passes available on BookMyShow, Zomato District, and Urbanaut.",
     image: "/card2.jpeg",
-    spots: "Donor Passes Available",
+    spots: "150+ Attendees Expected",
     price: "Book on BookMyShow",
   },
   {
@@ -51,12 +51,12 @@ const events: Event[] = [
     title: "Krishna Nāda",
     subtitle: "Vocal & Santoor Recital",
     date: "Sunday, 10th May 2026 · 06:00 PM Onwards",
-    location: "Iskcon Temple, Sector 13, Dwarka, New Delhi",
+    location: "ISKCON Dwarka, Sector 13, New Delhi",
     category: "Music Baithak",
     description:
       "Two Soulful Performances. One Divine Experience. Featuring eminent classical musicians.",
     longDescription:
-      "Join us for an evening of transcendence at the ISKCON Temple. The event features two main segments: A Vocal Recital by renowned artists and a Santoor Recital accompanied by Tabla and Pakhawaj. This experience is designed to bring you closer to the divine through the purity of classical raga and bhakti. Dinner Prasadam will be served after the performances. Donor passes can be booked via BookMyShow and other partner platforms.",
+      "Experience the transformative power of Indian Classical Music at ISKCON Dwarka. As part of our Nāda-Maṇḍala initiative, we bring together tradition and spirituality. This event is designed to revive classical music, support young emerging talent, and create soulful experiences. The evening includes a comprehensive flow from Raaga to Naam Sankirtan, ending with a meditative Santoor performance. Attendees will also enjoy the premium amenities of ISKCON Dwarka, including the world-class Govinda's restaurant and ample parking. For sponsorship inquiries, contact chinmay.sharma@avyuktaenterprises.com.",
     image: "/card1.jpeg",
     spots: "Limited Capacity",
     price: "Book Online",
@@ -201,6 +201,101 @@ export default function Events() {
               ))}
             </AnimatePresence>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── Nāda-Maṇḍala Initiative ── */}
+      <section className="bg-white py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <p className="text-xs tracking-[0.35em] uppercase text-gold mb-6 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>Our Initiative</p>
+              <h2 className="font-serif text-4xl md:text-5xl text-maroon font-light leading-snug mb-8">Nāda-Maṇḍala</h2>
+              <p className="text-foreground/80 text-lg font-serif italic mb-8">"A Sacred Experience of Stillness, Bhaav & Devotion"</p>
+              <p className="text-muted-foreground text-base leading-loose font-light mb-8" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Nāda-Maṇḍala bridges culture, spirituality, and community. We aim to preserve Indian classical music and art, support young emerging talent, and create divine experiences that connect hearts through cultural music.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  "Preserve Classical Heritage",
+                  "Support Emerging Talent",
+                  "Promote Vedic Chants Globally",
+                  "Spiritual & Scientific Awareness"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-gold">✦</span>
+                    <span className="text-xs uppercase tracking-widest text-maroon/70 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative aspect-[4/3] bg-ivory p-8 border border-gold/20 flex flex-col justify-center text-center">
+              <h3 className="font-serif text-2xl text-maroon mb-6">Why This Matters</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-8" style={{ fontFamily: "'Inter', sans-serif" }}>
+                In a world full of noise, people seek peace. Indian classical music is a technology of consciousness that provides that stillness. We are reviving what truly matters.
+              </p>
+              <div className="gold-divider mb-8" />
+              <div className="flex justify-around text-center">
+                <div>
+                  <p className="text-2xl font-serif text-maroon">50k+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-gold mt-1">Digital Reach</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-serif text-maroon">2k+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-gold mt-1">Physical Footfall</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sponsorship Proposal ── */}
+      <section className="bg-maroon py-28 px-6 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 mandala-overlay" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <p className="text-xs tracking-[0.35em] uppercase text-gold mb-6 font-medium">Sponsorship</p>
+          <h2 className="font-serif text-4xl md:text-5xl font-light mb-10 text-ivory">Let's Create Something Divine Together</h2>
+          <p className="text-ivory/70 text-lg font-light leading-relaxed mb-12" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Not just visibility—meaningful association. Become a supporter of Indian culture, a promoter of spirituality, and a patron of young talent.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-16">
+            <div className="bg-white/5 p-8 border border-white/10 backdrop-blur-sm">
+              <h4 className="text-gold uppercase tracking-[0.2em] text-xs font-medium mb-4">Marketing Reach</h4>
+              <ul className="text-sm space-y-3 font-light text-ivory/80" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <li>• 50,000+ Digital Reach</li>
+                <li>• 2.5 Lakh+ ISKCON Audience Base</li>
+                <li>• BookMyShow & Zomato District</li>
+                <li>• 360° Temple Premises Branding</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 p-8 border border-white/10 backdrop-blur-sm">
+              <h4 className="text-gold uppercase tracking-[0.2em] text-xs font-medium mb-4">Target Audience</h4>
+              <ul className="text-sm space-y-3 font-light text-ivory/80" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <li>• Affluent Families & Seekers</li>
+                <li>• Cultural Enthusiasts</li>
+                <li>• Professionals & Business Class</li>
+                <li>• High-Trust, High-Engagement</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 p-8 border border-white/10 backdrop-blur-sm">
+              <h4 className="text-gold uppercase tracking-[0.2em] text-xs font-medium mb-4">Brand Benefits</h4>
+              <ul className="text-sm space-y-3 font-light text-ivory/80" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <li>• Logo on all event creatives</li>
+                <li>• On-ground ISKCON Branding</li>
+                <li>• Stage mentions & Promotions</li>
+                <li>• Emotional brand connection</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold/60 font-medium">Contact for Proposal</p>
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <a href="tel:+919711167679" className="text-ivory font-light tracking-widest hover:text-gold transition-colors font-inter text-sm">+91 97111 67679</a>
+              <a href="mailto:chinmay.sharma@avyuktaenterprises.com" className="text-ivory font-light tracking-widest hover:text-gold transition-colors font-inter text-sm underline underline-offset-8">chinmay.sharma@avyuktaenterprises.com</a>
+            </div>
+          </div>
         </div>
       </section>
 

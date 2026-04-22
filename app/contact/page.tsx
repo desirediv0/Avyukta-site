@@ -137,19 +137,34 @@ export default function Contact() {
                   <div className="w-10 h-10 bg-maroon/5 border border-gold/20 flex items-center justify-center flex-shrink-0">
                     <Mail size={16} className="text-gold" />
                   </div>
-                  <div>
-                    <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      Email
-                    </p>
-                    <a
-                      href="mailto:info@avyuktaenterprises.com"
-                      className="text-foreground/80 text-sm font-light hover:text-gold transition-colors break-all"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
-                      info@avyuktaenterprises.com
-                    </a>
+                  <div className="flex flex-col gap-4">
+                    <div>
+                      <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        General Inquiry
+                      </p>
+                      <a
+                        href="mailto:info@avyuktaenterprises.com"
+                        className="text-foreground/80 text-sm font-light hover:text-gold transition-colors break-all"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        info@avyuktaenterprises.com
+                      </a>
+                    </div>
+                    <div>
+                      <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        Sponsorship & Business
+                      </p>
+                      <a
+                        href="mailto:chinmay.sharma@avyuktaenterprises.com"
+                        className="text-foreground/80 text-sm font-light hover:text-gold transition-colors break-all"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        chinmay.sharma@avyuktaenterprises.com
+                      </a>
+                    </div>
                   </div>
                 </div>
+
 
                 <div className="flex items-start gap-5">
                   <div className="w-10 h-10 bg-maroon/5 border border-gold/20 flex items-center justify-center flex-shrink-0">

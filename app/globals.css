@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  
+  --color-maroon: #6E0F1F;
+  --color-maroon-dark: #4A0A14;
+  --color-gold: #D4AF37;
+  --color-ivory: #F8F5F0;
+  --color-charcoal: #1A1A1A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gold shimmer text */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #D4AF37 0%,
+    #F5E193 40%,
+    #D4AF37 60%,
+    #B8960F 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 2px;
+}
+
+/* Custom selection */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #1A1A1A;
+}
+
+/* Decorative divider */
+.ornamental-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ornamental-divider::before,
+.ornamental-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+/* Indian motif border */
+.motif-border {
+  border-image: linear-gradient(90deg, transparent, #D4AF37, transparent) 1;
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D4AF37, #F5E193, #B8960F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-maroon-texture {
+    background-color: #6E0F1F;
+    background-image: 
+      radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(212,175,55,0.05) 0%, transparent 50%);
+  }
+}
+
+
+/* Custom brand utilities */
+.font-serif {
+  font-family: 'Playfair Display', 'Cormorant', Georgia, serif;
+}
+.font-display {
+  font-family: 'Cormorant', 'Playfair Display', Georgia, serif;
+}
+
+/* Mandala / Indian pattern overlay */
+.mandala-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.mandala-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.4' opacity='0.12'%3E%3Ccircle cx='40' cy='40' r='38'/%3E%3Ccircle cx='40' cy='40' r='28'/%3E%3Ccircle cx='40' cy='40' r='18'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3Cpath d='M40 2L40 78M2 40L78 40M8 8L72 72M72 8L8 72'/%3E%3Cpath d='M40 12L40 68M12 40L68 40'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gold divider line */
+.gold-divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, oklch(0.74 0.14 83), transparent);
+  margin: 0 auto;
+}
+
+/* Smooth hover card */
+.luxury-card {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.5s ease;
+}
+.luxury-card:hover {
+  transform: translateY(-6px);
+  border-color: oklch(0.74 0.14 83);
+  box-shadow: 0 20px 60px oklch(0.74 0.14 83 / 0.15), 0 0 0 1px oklch(0.74 0.14 83 / 0.3);
+}
+
+/* Gold text shimmer */
+.gold-text {
+  color: oklch(0.74 0.14 83);
+}
+
+/* Maroon bg */
+.bg-maroon { background-color: oklch(0.28 0.13 15); }
+.bg-maroon-deep { background-color: oklch(0.22 0.12 15); }
+.text-maroon { color: oklch(0.28 0.13 15); }
+.border-gold { border-color: oklch(0.74 0.14 83); }
+.text-gold { color: oklch(0.74 0.14 83); }
+.bg-gold { background-color: oklch(0.74 0.14 83); }
+.bg-ivory { background-color: oklch(0.97 0.008 82); }

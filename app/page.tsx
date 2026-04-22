@@ -84,7 +84,7 @@ export default function HomePage() {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.5, duration: 1, ease: "easeOut" }} className="mb-6">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-12" style={{ background: "linear-gradient(to right, transparent, rgba(212,175,55,0.6))" }} />
-              <span className="text-xs tracking-[0.4em] uppercase font-inter" style={{ color: "rgba(212,175,55,0.4)" }}>Est. 2023</span>
+              <span className="text-xs tracking-[0.4em] uppercase font-inter" style={{ color: "rgba(212,175,55,0.4)" }}>Est. 2018</span>
               <div className="h-px w-12" style={{ background: "linear-gradient(to left, transparent, rgba(212,175,55,0.6))" }} />
             </div>
             <Image

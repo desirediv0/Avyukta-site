@@ -64,9 +64,9 @@ export default function Footer() {
             <div className="flex items-start gap-3 group">
               <MapPin size={14} className="text-gold/60 mt-0.5 shrink-0" />
               <span className="text-sm font-inter text-ivory/50 leading-relaxed">
-                D-333, Block D, Defence Colony,
-                <br />
-                New Delhi – 110024
+                Plot No.94, 3rd Floor, B Block,<br />
+                Pocket 10, Sector 13 Dwarka,<br />
+                New Delhi – 110075
               </span>
             </div>
             <div className="flex items-center gap-3">

@@ -108,9 +108,9 @@ export default function Contact() {
                       Address
                     </p>
                     <p className="text-foreground/80 text-sm leading-relaxed font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      D-333, Block D<br />
-                      Defence Colony<br />
-                      New Delhi – 110024
+                      Plot No.94, 3rd Floor, B Block,<br />
+                      Pocket 10, Sector 13 Dwarka,<br />
+                      New Delhi – 110075
                     </p>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export default function Contact() {
           >
             <iframe
               title="Avyukta Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.1!2d77.2!3d28.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b83c9b4b71%3A0x8e9b5e2e1e3f9c2e!2sDefence%20Colony%2C%20New%20Delhi%2C%20Delhi%20110024!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14012.009121763103!2d77.04546585!3d28.5997084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20No.94%2C%203rd%20Floor%2C%20B%20Block%2C%20Pocket%2010%2C%20Sector%2013%20Dwarka%2C%20110075!5e0!3m2!1sen!2sin!4v1776921520576!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(0.4) sepia(0.2)" }}
